@@ -227,22 +227,50 @@ nav a:hover {
     border-top: 1px solid var(--project-border);
 }
 
-/* --- Seção de Certificações --- */
+/* --- Seção de Formação acadêmica --- */
 .corpo .logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.corpo .logos img {
-    max-width: 150px;
-    max-height: 80px;
+.academica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
     border: 1px solid var(--project-border);
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.academica a {
+    text-decoration: none; /* Esta regra remove o sublinhado */
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.academica img {
+    max-width: 150px;
+    max-height: 86px;
+    border: 2px solid var(--project-border);
     border-radius: 4px;
     padding: 5px;
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.academica p {
+    font-size: 0.8em;
+    color: var(--secondary-text);
+    margin: 0;
 }
 
 /* --- Media Queries (Responsividade) --- */
