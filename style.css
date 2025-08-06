@@ -124,11 +124,7 @@ nav a:hover {
     font-size: 1em;
     font-weight: 700;
     color: var(--primary-text);
-    padding-left: 25px;
     margin-bottom: 10px;
-    background-image: var(--icon-info);
-    background-repeat: no-repeat;
-    background-position: left center;
 }
 
 .info-links ul {
@@ -144,20 +140,8 @@ nav a:hover {
     border-radius: 4px;
     transition: background-color 0.3s;
     font-size: 0.9em;
-    padding-left: 25px;
-    background-repeat: no-repeat;
-    background-position: 5px center;
 }
 
-/* Adicionando ícones específicos aos links */
-.info-links a[href*="perfil"] { background-image: var(--icon-perfil); }
-.info-links a[href*="projetos"] { background-image: var(--icon-projetos); }
-.info-links a[href*="curriculo"] { background-image: var(--icon-curriculo); }
-.info-links a[href*="contato"] { background-image: var(--icon-contato); }
-
-.info-links a:hover {
-    background-color: #e6e8eb;
-}
 
 /* --- Content (Conteúdo Principal) --- */
 .content {
@@ -297,5 +281,115 @@ nav a:hover {
     .corpo .logos {
         flex-direction: column;
         gap: 10px;
+    }
+}
+
+/* --- Estilos específicos para o Currículo (para usar com a estrutura de .secao) --- */
+.education {
+    margin-bottom: 10px;
+}
+
+.education h5 {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.education p {
+    font-size: 0.9em;
+    color: var(--secondary-text);
+}
+
+.skills-list, .courses-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.skills-list li, .courses-list li {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.skills-list li::before, .courses-list li::before {
+    content: '•';
+    color: var(--link-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* --- Estilo para o botão de download --- */
+.download-button {
+    display: inline-block;
+    background-color: var(--header-bg-start);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.download-button:hover {
+    background-color: var(--header-bg-end);
+}
+
+/* --- Estilos para a página de Contato --- */
+.botoes-contato-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.botoes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    gap: 15px; /* Espaço entre os botões */
+    justify-items: center; /* Centraliza cada item na sua célula */
+    width: 100%;
+}
+
+.botao-social {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-sizing: border-box; /* Garante que padding e borda não afetem a largura */
+}
+
+.botao-social:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cores específicas para cada botão */
+.linkedin { background-color: #0077B5; }
+.whatsapp { background-color: #25D366; }
+.github-social { background-color: #000000; }
+.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.tiktok { background-color: #000000; }
+.youtube { background-color: #FF0000; }
+
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .botoes-grid {
+        grid-template-columns: repeat(2, 1fr); /* Em telas menores, duas colunas */
+    }
+}
+
+@media (max-width: 480px) {
+    .botoes-grid {
+        grid-template-columns: 1fr; /* Em telas pequenas, uma coluna */
     }
 }
