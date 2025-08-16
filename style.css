@@ -421,3 +421,32 @@ nav a:hover {
         grid-template-columns: 1fr; /* Em telas pequenas, uma coluna */
     }
 }
+
+/* Links da sidebar como botões */
+.info-links ul {
+  list-style: none;      /* remove marcadores da lista */
+  padding: 0;
+}
+
+.info-links li {
+  margin: 10px 0;
+}
+
+.info-links a {
+  display: block;                       /* ocupa toda a largura */
+  padding: 10px 15px;
+  border: 2px solid #0077b6;            /* borda azul */
+  border-radius: 8px;                   /* cantos arredondados */
+  text-decoration: none;                /* remove sublinhado */
+  color: #0077b6;                       /* cor do texto */
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;            /* cor de fundo clara */
+}
+
+.info-links a:hover {
+  background-color: #0077b6;            /* fundo azul ao passar o mouse */
+  color: white;                         /* texto branco */
+  transform: scale(1.05);               /* cresce levemente */
+}
